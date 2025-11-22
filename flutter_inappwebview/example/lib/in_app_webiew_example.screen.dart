@@ -115,7 +115,8 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
                 InAppWebView(
                   key: webViewKey,
                   webViewEnvironment: webViewEnvironment,
-                  initialUrlRequest: Uri.parse('https://flutter.dev'),
+                  initialUrlRequest:
+                      URLRequest(url: Uri.parse('https://flutter.dev')),
                   // initialUrlRequest:
                   // URLRequest(url: WebUri(Uri.base.toString().replaceFirst("/#/", "/") + 'page.html')),
                   // initialFile: "assets/index.html",

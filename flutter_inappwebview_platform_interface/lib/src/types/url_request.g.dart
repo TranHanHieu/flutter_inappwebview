@@ -138,7 +138,7 @@ class URLRequest {
   double? timeoutInterval;
 
   ///The URL of the request. Setting this to `null` will load `about:blank`.
-  WebUri? url;
+  Uri? url;
   URLRequest(
       {this.allowsCellularAccess,
       this.allowsConstrainedNetworkAccess,
@@ -226,7 +226,7 @@ class URLRequest {
       networkServiceType: URLRequestNetworkServiceType.fromNativeValue(
           map['networkServiceType']),
       timeoutInterval: map['timeoutInterval'],
-      url: map['url'] != null ? WebUri(map['url']) : null,
+      url: map['url'] != null ? Uri.parse(map['url']) : null,
     );
     return instance;
   }

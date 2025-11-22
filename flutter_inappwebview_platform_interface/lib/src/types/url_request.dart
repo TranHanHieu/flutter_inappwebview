@@ -12,7 +12,7 @@ part 'url_request.g.dart';
 @ExchangeableObject()
 class URLRequest_ {
   ///The URL of the request. Setting this to `null` will load `about:blank`.
-  WebUri? url;
+  Uri? url;
 
   ///The HTTP request method.
   ///
