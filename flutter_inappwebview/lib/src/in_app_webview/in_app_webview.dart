@@ -66,7 +66,8 @@ class InAppWebView extends StatefulWidget {
     @Deprecated('Use initialSettings instead')
     InAppWebViewGroupOptions? initialOptions,
     InAppWebViewSettings? initialSettings,
-    URLRequest? initialUrlRequest,
+    Uri? initialUrlRequest,
+    
     UnmodifiableListView<UserScript>? initialUserScripts,
     PullToRefreshController? pullToRefreshController,
     FindInteractionController? findInteractionController,
@@ -302,7 +303,7 @@ class InAppWebView extends StatefulWidget {
                       InAppWebViewController.fromPlatform(platform: controller),
               windowId: windowId,
               keepAlive: keepAlive,
-              initialUrlRequest: initialUrlRequest,
+              initialUrlRequest: URLRequest(url: WebUri.uri(initialUrlRequest ?? Uri.parse('https://vetc.com.vn'))),
               initialFile: initialFile,
               initialData: initialData,
               initialOptions: initialOptions,
